@@ -5,11 +5,17 @@ import Albums from '../pages/Albums.vue'
 import Tracks from '../pages/Tracks.vue'
 import MainPage from '../pages/MainPage.vue'
 import About from '../pages/About.vue'
+import Auth from '../pages/Auth.vue'
 
 export default new VueRouter({
   routes: [
     {
       path: '/',
+      name: 'auth',
+      component: Auth,
+    },
+    {
+      path: '/main',
       name: 'main',
       component: MainPage,
     },

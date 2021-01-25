@@ -1,8 +1,11 @@
 <template>
   <div id="app">
-    <Nav></Nav>
-    <router-view></router-view>
-    <Footter></Footter>
+    <Auth v-if="this.isActive"></Auth>
+    <div v-else>
+      <Nav></Nav>
+      <router-view> </router-view>
+      <Footter></Footter>
+    </div>
   </div>
 </template>
 
@@ -11,6 +14,7 @@ import MainPage from './pages/MainPage.vue'
 import Bands from './pages/Bands.vue'
 import Albums from './pages/Albums.vue'
 import Tracks from './pages/Tracks.vue'
+import Auth from './pages/Auth.vue'
 import Nav from './components/Nav.vue'
 import Footter from './components/Footter.vue'
 import About from './pages/About.vue'
@@ -20,16 +24,18 @@ import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'App',
+  data() {
+    return {
+      isActive: false,
+    }
+  },
   components: {
     Nav,
     Footter,
     About,
+    Auth,
   },
 }
 </script>
 
-<style lang="scss" scoped>
-h1 {
-  color: purple;
-}
-</style>
+<style lang="scss" scoped></style>

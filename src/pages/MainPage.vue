@@ -9,7 +9,14 @@
 </template>
 
 <script>
-export default {}
+import Nav from '../components/Nav.vue'
+import Footter from '../components/Footter.vue'
+export default {
+  components: {
+    Nav,
+    Footter,
+  },
+}
 </script>
 
 <style lang="scss" scoped>
