@@ -5,7 +5,7 @@
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Launch current project on localhost 8080
 ```
 npm run serve
 ```
