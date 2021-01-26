@@ -1,8 +1,8 @@
 <template>
   <div>
     <ul>
-      <li id="left" title="Sorry, this function isn't available now">
-        Media player
+      <li id="left">
+        <a @click="$router.push({ name: 'auth' })">Logout</a>
       </li>
       <li id="right" title="Support this project">
         <img src="./1492532985-mastercardcard_83243.png" />
@@ -28,7 +28,7 @@ ul {
     left: 15px;
     bottom: 15px;
     &:hover {
-      cursor: not-allowed;
+      cursor: pointer;
     }
   }
   #right {

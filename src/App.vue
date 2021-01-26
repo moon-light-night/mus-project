@@ -1,11 +1,8 @@
 <template>
   <div id="app">
-    <Auth v-if="this.isActive"></Auth>
-    <div v-else>
-      <Nav></Nav>
-      <router-view> </router-view>
-      <Footter></Footter>
-    </div>
+    <Nav></Nav>
+    <router-view> </router-view>
+    <Footter></Footter>
   </div>
 </template>
 
